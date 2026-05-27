@@ -265,7 +265,9 @@ nav a.active {
     background-color: #4f5560;
     border-radius: 10px;
     margin-top: 10px;
-    align-items: stretch; 
+    align-items: stretch;
+    height: auto;
+    min-height: auto;
 }
 
 .project-card {
@@ -275,6 +277,12 @@ nav a.active {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Larger shadow for emphasis */
     text-align: left;
     transition: all 0.3s ease; /* Smooth transition for hover effect */
+    position: relative;
+    height: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .project-card:hover {
@@ -305,6 +313,7 @@ color:black;
 
 .project-card .technologies {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1rem;
     margin: 5px;
@@ -1276,6 +1285,13 @@ text-align: center;
         padding: 40px 20px;
     }
 
+    /* Projects Responsive Grid */
+    .projects-container {
+        padding: 3rem 5%;
+        gap: 24px;
+        height: auto;
+    }
+
     /* Footer Responsive Grid */
     .footer-content {
         grid-template-columns: 1fr;
@@ -1378,9 +1394,21 @@ text-align: center;
 
     /* Projects Mobile Container */
     .projects-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         padding: 20px 15px;
-        gap: 20px;
+        gap: 24px;
+        height: auto;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .project-card {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     /* Skills spacing */
@@ -1447,6 +1475,20 @@ text-align: center;
 
     .contact-form {
         padding: 20px 12px;
+    }
+
+    .projects-container {
+        padding: 15px 10px;
+        gap: 16px;
+    }
+
+    .project-card {
+        padding: 18px 15px;
+    }
+
+    .project-card h3 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
     }
 }
 
